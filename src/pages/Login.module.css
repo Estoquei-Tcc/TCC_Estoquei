@@ -1,0 +1,166 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, var(--cor-fundo), var(--cor-borda));
+}
+
+.blur {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    background: var(--cor-superficie);
+
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+}
+
+.painel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    transform: translateX(0);
+}
+
+.painel h1,
+.painel p {
+    color: var(--cor-superficie);
+}
+
+.ativo .painel {
+    transform: translateX(-200%);
+}
+
+.splitLogin,
+.splitRegistro {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(
+        90deg,
+        var(--cor-primaria),
+        var(--cor-primaria-hover)
+    );
+    gap: 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.formLogin,
+.formRegistrar {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.login,
+.registrar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.login p,
+.registrar p {
+    color: var(--cor-texto-secundario);
+}
+
+.containerIcones {
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icone {
+    width: 40px;
+    height: 40px;
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid var(--cor-borda);
+}
+
+.icone:hover {
+    background-color: var(--cor-borda);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campo p {
+    color: red;
+    font-size: var(--fonte-pequena);
+}
+
+input {
+    border: 0;
+    background-color: var(--cor-borda);
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+}
+
+.buttonEnviar {
+    border: none;
+    padding: 10px 45px;
+    color: var(--cor-superficie);
+    background-color: var(--cor-primaria);
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.buttonEnviar:hover {
+    background-color: var(--cor-primaria-hover);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.buttonSplit {
+    border: #fff 1px solid;
+    padding: 10px 45px;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.buttonSplit:hover {
+    background-color: var(--cor-primaria-hover);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+

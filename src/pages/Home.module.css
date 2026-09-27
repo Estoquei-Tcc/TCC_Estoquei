@@ -1,0 +1,339 @@
+/* TELA PRINCIPAL */
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar button {
+    position: fixed;
+    z-index: 100;
+    right: 5%;
+    top: 5%;
+    padding: 5px 30px;
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: var(--fonte-corpo);
+    border-radius: 100px;
+    border: 1px solid;
+}
+
+.navbar button:hover {
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.logo {
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo h2 {
+    margin-top: 5%;
+    font-family: var(--fonte-logo);
+    font-size: var(--fonte-titulo);
+}
+
+.conteudo {
+    height: 99.6vh;
+    background: linear-gradient(
+        160deg,
+        var(--cor-primaria-clara),
+        var(--cor-primaria)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    letter-spacing: 1.5px;
+    gap: 3px;
+    
+}
+
+.texto p {
+    margin-top: 30px;
+}
+
+.texto h1 {
+    font-size: var(--fonte-titulo-grande);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.texto button.comecar {
+    margin-top: 10%;
+    background-color: transparent;
+    border-radius: 100px;
+    width: 200px;
+    padding: 8px 10px;
+    font-size: var(--fonte-corpo);
+    font-weight: 500;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--cor-texto);
+}
+
+.texto button.comecar:hover {
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    border: var(--cor-fundo) 1px solid;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.imagem {
+  
+    filter: blur(8px);
+    flex: 30%;
+    position: relative;
+    height: 100%;
+}
+
+@keyframes flutuandoLapis {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(10px, -8px) rotate(2deg);
+    }
+
+    50% {
+        transform: translate(20px, -12px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(10px, -6px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes flutuandoTeclado {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-5px, -6px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translate(-10px, -10px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-5px, -5px) rotate(1deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes flutuandoAgenda {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-4px) rotate(1deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+}
+
+.imagem img.teclado {
+    position: absolute;
+    right: -4%;
+    top: 30%;
+    width: 350px;
+    animation: flutuandoTeclado 7s ease-in-out infinite ;
+    animation-delay: -2s;
+}
+
+.imagem img.lapis {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 200px;
+    animation: flutuandoLapis 6s ease-in-out  infinite ;
+}
+
+.imagem img.agenda {
+    position: absolute;
+    top: 20%;
+    right: 50%;
+    width: 250px;
+    animation: flutuandoAgenda 5.5s ease-in-out infinite ;
+    animation-delay: -2s;
+}
+
+/*Seção 1 (Sobre Nós e Imagem)*/
+.secao1 {
+    background-color: var(--cor-fundo);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobreNos {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.cardSobreNos {
+    width: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+.textoSobreNos {
+    flex: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.textoSobreNos .titulo1 {
+    font-size: var(--fonte-logo-tamanho);
+    margin-top: 10%;
+}
+
+.textoSobreNos .titulo2 {
+    font-size: var(--fonte-logo-tamanho);
+}
+
+.textoSobreNos p {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/*SEÇÃO 2 (Funcionalidades / Soluções)*/
+.secao2 {
+    height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
+.solucoes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tituloSolucoes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.tituloSolucoes h1 {
+    font-size: var(--fonte-titulo-grande);
+}
+
+.containerCardsSolucoes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardSolucao {
+    color: var(--cor-texto-claro);
+    width: 320px;
+    aspect-ratio: 1/1;
+    background: linear-gradient(
+        160deg,
+        var(--cor-primaria),
+        var(--cor-primaria-hover)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nomeSolucao {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nomeSolucao .icone {
+    font-size: var(--fonte-titulo-grande);
+}
+
+footer {
+    padding: 18px 32px;
+    color: var(--cor-fundo);    
+    border-top: 1px solid var(--cor-fundo);
+    background: linear-gradient(
+        180deg,
+        var(--cor-primaria) 0%,
+        var(--cor-primaria-hover) 100%
+    );  
+    text-align: center;
+    font-size: var(--fonte-pequena);
+}
+
+footer p {
+    margin-bottom: 30px;
+}

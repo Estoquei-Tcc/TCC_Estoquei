@@ -1,0 +1,43 @@
+.container {
+    min-width: 0;
+    padding: 0 32px;
+    color: var(--cor-texto);
+    border-bottom: 1px solid var(--cor-borda);
+    background-color: var(--cor-superficie);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eyebrow {
+    margin-bottom: 2px;
+    color: #9a6f4c;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.container strong {
+    display: block;
+    font-size: 0.98rem;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icone {
+    font-size: var(--fonte-titulo-grande);
+}
+
+@media (max-width: 560px) {
+    .container {
+        padding: 0 16px;
+    }
+    .status {
+        padding: 6px 9px;
+        font-size: 0.72rem;
+    }
+}

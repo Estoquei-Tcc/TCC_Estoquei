@@ -1,0 +1,16 @@
+.container {
+    padding: 18px 32px;
+    color: var(--cor-fundo);    
+    border-top: 1px solid var(--cor-fundo);
+    background: linear-gradient(
+        180deg,
+        var(--cor-primaria) 0%,
+        var(--cor-primaria-hover) 100%
+    );  
+    text-align: center;
+    font-size: var(--fonte-pequena);
+}
+
+p {
+    margin-bottom: 30px;
+}

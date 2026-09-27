@@ -1,0 +1,26 @@
+.alerta {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--cor-alerta-fundo);
+    border: 1px solid #ffb066;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin-bottom: 16px;
+    flex-direction: column;
+}
+
+span {
+    font-weight: 700;
+}
+
+
+.alertaTexto {
+    font-size: 0.875rem;
+   
+    margin: 0;
+}
+
+strong {
+    color: var(--cor-alerta);
+}

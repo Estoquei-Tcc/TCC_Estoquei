@@ -1,0 +1,127 @@
+.container {
+    min-height: 100%;
+    padding: 36px 40px 48px;
+    background: var(--cor-fundo);
+}
+
+.titulo {
+    margin: 0;
+    color: #3b1c00;
+    font-size: clamp(1.55rem, 3vw, 2rem);
+    font-weight: 700;
+}
+
+.titulo::after {
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 999px;
+    background: var(--cor-primaria);
+    content: "";
+}
+
+.texto {
+    display: flex;
+    justify-content: flex-end;
+    margin: -42px 0 30px;
+}
+
+.texto button.comecar {
+    padding: 11px 18px;
+    color: var(--cor-superficie);
+    border: none;
+    border-radius: 10px;
+    background: var(--cor-primaria);
+    box-shadow: 0 6px 14px rgba(204, 99, 0, 0.25);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 0.18s ease,
+        background-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.texto button.comecar:hover {
+    background-color: var(--cor-primaria-hover);
+    box-shadow: 0 9px 18px rgba(204, 99, 0, 0.32);
+    transform: translateY(-2px);
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.mes {
+    margin: 0 0 -14px;
+    color: #6b3300;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.tabela {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #ffe1c2;
+    border-radius: 14px;
+    border-spacing: 0;
+    background: var(--cor-superficie);
+    box-shadow: 0 8px 20px rgba(113, 59, 7, 0.08);
+}
+
+.tabela th {
+    padding: 14px 16px;
+    color: #8f4809;
+    border-bottom: 1px solid #ffe8d1;
+    background: #fff7ef;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.tabela td {
+    padding: 14px 16px;
+    color: #4b280a;
+    border-bottom: 1px solid #fff0e0;
+    font-size: 0.9rem;
+}
+
+.tabela tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.tabela tbody tr:hover {
+    background-color: #fffaf5;
+}
+
+.tipo {
+    white-space: nowrap;
+}
+
+/* ---------- RESPONSIVIDADE -------------- */
+
+@media (max-width: 700px) {
+    .container {
+        padding: 28px 16px 36px;
+    }
+
+    .texto {
+        justify-content: flex-start;
+        margin: 24px 0;
+    }
+
+    .tabela {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
