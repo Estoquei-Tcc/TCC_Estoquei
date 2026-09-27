@@ -1,73 +1,140 @@
-# React + TypeScript + Vite
+# Estoquei!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Estoquei! — Controle de Estoque Simples**
 
-Currently, two official plugins are available:
+Sistema de gerenciamento de estoque desenvolvido como Trabalho de Conclusão de Curso (TCC) do curso de **Ensino Médio Integrado ao Técnico em Desenvolvimento de Sistemas da ETEC de Hortolândia**, em 2026.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto é voltado para **microempresas e pequenos empreendedores**, oferecendo uma solução simples e acessível para organização e controle de estoque.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sobre o projeto
 
-## Expanding the ESLint configuration
+Muitas microempresas realizam o controle de seus produtos por meio de planilhas, anotações em papel ou outros métodos manuais, o que pode dificultar o acompanhamento das quantidades disponíveis e ocasionar erros nos registros.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O **Estoquei!** busca facilitar esse processo por meio do cadastro de produtos e do acompanhamento das movimentações de entrada e saída de mercadorias.
 
-```js
-export default defineConfig([
-    globalIgnores(["dist"]),
-    {
-        files: ["**/*.{ts,tsx}"],
-        extends: [
-            // Other configs...
+### Objetivos
 
-            // Remove tseslint.configs.recommended and replace with this
-            tseslint.configs.recommendedTypeChecked,
-            // Alternatively, use this for stricter rules
-            tseslint.configs.strictTypeChecked,
-            // Optionally, add this for stylistic rules
-            tseslint.configs.stylisticTypeChecked,
+- Organizar as informações dos produtos;
+- Facilitar o controle de estoque;
+- Reduzir erros causados por processos manuais;
+- Acompanhar as movimentações de estoque;
+- Auxiliar na administração dos produtos;
+- Oferecer uma interface simples e acessível.
 
-            // Other configs...
-        ],
-        languageOptions: {
-            parserOptions: {
-                project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-                tsconfigRootDir: import.meta.dirname,
-            },
-            // other options...
-        },
-    },
-]);
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Projeto Web
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+O **Estoquei! Web** permite o gerenciamento dos produtos e das informações relacionadas ao estoque por meio de navegadores.
 
-export default defineConfig([
-    globalIgnores(["dist"]),
-    {
-        files: ["**/*.{ts,tsx}"],
-        extends: [
-            // Other configs...
-            // Enable lint rules for React
-            reactX.configs["recommended-typescript"],
-            // Enable lint rules for React DOM
-            reactDom.configs.recommended,
-        ],
-        languageOptions: {
-            parserOptions: {
-                project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-                tsconfigRootDir: import.meta.dirname,
-            },
-            // other options...
-        },
-    },
-]);
-```
+### Funcionalidades
+
+- Cadastro e login de usuários;
+- Cadastro, consulta e pesquisa de produtos;
+- Filtro por status do estoque;
+- Dashboard;
+- Registro de entrada e saída de produtos;
+- Atualização da quantidade disponível;
+- Histórico de movimentações;
+- Organização por categorias;
+- Visualização de estatísticas;
+- Relatórios básicos de estoque.
+
+### Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+- TypeScript
+- React
+
+---
+
+# Projeto Mobile
+
+O **Estoquei! Mobile** disponibiliza as principais funcionalidades do sistema em uma aplicação para smartphones.
+
+### Funcionalidades
+
+- Login e cadastro de usuários;
+- Dashboard;
+- Cadastro e consulta de produtos;
+- Visualização de informações dos produtos;
+- Registro de entradas e saídas;
+- Histórico de movimentações;
+- Visualização de estatísticas;
+- Navegação pelas áreas do sistema.
+
+### Tecnologias
+
+- React Native
+- TypeScript
+- Expo
+- Expo Router
+
+---
+
+# Back-end
+
+O back-end é responsável pelo gerenciamento e armazenamento das informações utilizadas pelas aplicações Web e Mobile.
+
+### Principais funções
+
+- Autenticação de usuários;
+- Gerenciamento de produtos;
+- Gerenciamento de categorias;
+- Registro das movimentações de estoque;
+- Armazenamento das informações dos fornecedores.
+
+### Banco de dados
+
+O sistema armazena informações relacionadas a:
+
+- Usuários;
+- Produtos;
+- Categorias;
+- Movimentações de estoque.
+
+---
+
+# Tecnologias e ferramentas
+
+- **Web:** HTML5, CSS3, JavaScript, TypeScript e React
+- **Mobile:** React Native, TypeScript, Expo e Expo Router
+- **Back-end:** Firebase
+- **Ferramentas:** Visual Studio Code e GitHub
+
+---
+
+# Principais telas
+
+- Tela inicial;
+- Login;
+- Cadastro de usuário;
+- Dashboard;
+- Cadastro de produtos;
+- Lista de produtos;
+- Detalhes do produto;
+- Registro de movimentações;
+- Histórico de movimentações;
+- Estatísticas.
+
+---
+
+# Equipe
+
+- **Kauã da Silva Padovani**
+- **Miguel Camilo da Silva**
+- **Nicolas Henrique Chereda Pereira**
+- **Paulo Alves Estevão**
+
+**ETEC de Hortolândia**  
+Ensino Médio Integrado ao Técnico em Desenvolvimento de Sistemas — **2026**
+
+---
+
+# Status
+
+**Em desenvolvimento**
